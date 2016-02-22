@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var wittyCalc = require('../public/javascripts/wittyCalc.js');
+var wittyCalc = require('../scripts/wittyCalc.js');
 
 /* GET home page. */
 router.get('/wittyComments', function(req, res, next) {
