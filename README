@@ -1,0 +1,11 @@
+To start node server: npm start
+To debug node server: npm debug
+
+Host: http://localhost
+Port: 3000
+
+Available endpoints:
+    /wittyComments
+
+
+Example: http://localhost:3000/wittyComments

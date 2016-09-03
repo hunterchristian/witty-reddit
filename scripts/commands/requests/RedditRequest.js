@@ -1,9 +1,16 @@
-var Command = require('../command');
+'use strict';
+
 var _ = require('lodash');
+var Command = require('../Command');
 var http = require('http');
 
 var REDDIT_HOST_NAME = 'www.reddit.com';
 
+/**
+ * Constructor for the RedditRequest simple command.
+ * @param {String} permalink
+ * @constructor
+ */
 function RedditRequest(permalink) {
     this.permalink = permalink;
 }

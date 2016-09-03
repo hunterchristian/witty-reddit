@@ -1,5 +1,5 @@
-var Submission = require('./submission');
-var Comment = require('./comment');
+var Submission = require('./models/Submission');
+var Comment = require('./models/Comment');
 var Promise = require('promise');
 
 var Parser = {
@@ -13,26 +13,6 @@ var Parser = {
         }
 
         return parsedSubmissions;
-    },
-    parseComments: function (submission) {
-        return new Promise(function (resolve, reject) {
-            var parsedComments = [];
-            
-            submission.getComments().then(function (rawComments) {
-                for(var i = 0; i < rawComments.length; i++) {
-                    if(rawComments[i].kind === 't1') {
-                        var parsedComment;
-                        try {
-                            parsedComment = new Comment(rawComments[i]);
-                            parsedComments.push(parsedComment);
-                        } catch (err) {
-                            debugger;
-                        }
-                    }
-                }
-                resolve(parsedComments);        
-            }, reject);
-        });
     }
 };
 
