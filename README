@@ -1,5 +1,5 @@
-To start node server: npm start
-To debug node server: npm debug
+To start node server: npm run start
+To debug node server: npm run debug
 
 Host: http://localhost
 Port: 3000
